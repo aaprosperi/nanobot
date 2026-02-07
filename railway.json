@@ -5,7 +5,6 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "nanobot gateway",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
