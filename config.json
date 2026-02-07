@@ -1,0 +1,27 @@
+{
+  "providers": {
+    "openrouter": {
+      "apiKey": "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"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "anthropic/claude-sonnet-4-5"
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "token": "8517340337:AAFsqTd7_qKna46pI5jQsqpygCfjkYWyKNY",
+      "allowFrom": ["7183589410"]
+    }
+  },
+  "tools": {
+    "restrictToWorkspace": true,
+    "web": {
+      "search": {
+        "apiKey": ""
+      }
+    }
+  }
+}
