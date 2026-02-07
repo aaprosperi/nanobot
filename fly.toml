@@ -1,12 +1,11 @@
 app = "nanobot-pixan"
-primary_region = "mia"
+primary_region = "iad"
 
 [build]
   dockerfile = "Dockerfile.fly"
 
 [env]
-  # Config will be created from secrets at runtime
-  CONFIG_PATH = "/root/.nanobot/config.json"
+  CONFIG_PATH = "/data/.nanobot/config.json"
 
 [http_service]
   internal_port = 18790
@@ -19,3 +18,7 @@ primary_region = "mia"
   memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
+
+[mounts]
+  source = "nanobot_data"
+  destination = "/data"
