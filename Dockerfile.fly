@@ -30,7 +30,7 @@ RUN mkdir -p /root/.nanobot
 ARG OPENROUTER_KEY
 ARG TELEGRAM_TOKEN
 ARG TELEGRAM_USER_ID
-RUN echo "{\"providers\":{\"openrouter\":{\"apiKey\":\"$OPENROUTER_KEY\"}},\"agents\":{\"defaults\":{\"model\":\"google/gemini-3-flash-preview\"}},\"channels\":{\"telegram\":{\"enabled\":true,\"token\":\"$TELEGRAM_TOKEN\",\"allowFrom\":[\"$TELEGRAM_USER_ID\"]}}}" > /root/.nanobot/config.json
+RUN echo "{\"providers\":{\"openrouter\":{\"apiKey\":\"$OPENROUTER_KEY\"}},\"agents\":{\"defaults\":{\"model\":\"google/gemini-flash-1.5\"}},\"channels\":{\"telegram\":{\"enabled\":true,\"token\":\"$TELEGRAM_TOKEN\",\"allowFrom\":[\"$TELEGRAM_USER_ID\"]}}}" > /root/.nanobot/config.json
 
 # Gateway default port
 EXPOSE 18790
