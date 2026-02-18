@@ -40,5 +40,6 @@ RUN mkdir -p /root/.nanobot
 # Gateway default port
 EXPOSE 18790
 
-# Use init script as entrypoint
+# Use init script as entrypoint, gateway as default command
 ENTRYPOINT ["/app/init-config.sh"]
+CMD ["nanobot", "gateway"]
